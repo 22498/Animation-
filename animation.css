@@ -1,0 +1,64 @@
+html, body, p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  background-color: gray;
+    min-height: 50vh;
+    display: grid;
+    grid-template-rows: repeat(6, auto) 1fr;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+#button {
+    font-size: 40px;
+    cursor: pointer;
+    grid-column: 1;
+    width: 50px;
+    color: white;
+
+}
+
+#button-text {
+    transition: transform .3s linear;
+    text-align: center;
+}
+
+#button ::-moz-selection {
+    background-color: transparent;
+}
+
+#button ::selection {
+    background-color: transparent;
+}
+
+#box1 {
+    background-color: red;
+    transition-delay: 0;
+}
+
+#box2 {
+    background-color: yellow;
+    transition-delay: 0.2s;
+}
+
+#box3 {
+    background-color: blue;
+    transition-delay: 0.4s;
+}
+
+.box {
+    width: 20em;
+    height: 5em;
+    grid-column: 1;
+    -webkit-transition: transform .4s cubic-bezier(.11,.33,.76,1.35);
+    -moz-transition: transform .4s cubic-bezier(.11,.33,.76,1.35);
+    transition: transform .4s cubic-bezier(.11,.33,.76,1.35);
+}
+
+.box--slide-out {
+    transform: translateX(30em);
+}
